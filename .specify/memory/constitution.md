@@ -1,55 +1,89 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.0.0 → 1.1.0
+- Modified principles: Principles 1-4 updated. Principles 5-6 removed.
+- Added sections: "Purpose, Environment & Audience", "Standards & Requirements"
+- Removed sections: None explicit from the template, but principle sections 5 and 6 are removed from the filled content.
+- Templates requiring updates:
+    - .specify/templates/plan-template.md ⚠ pending
+    - .specify/templates/spec-template.md ⚠ pending
+    - .specify/templates/tasks-template.md ⚠ pending
+    - .specify/templates/commands/sp.constitution.md ✅ updated
+- Follow-up TODOs: None.
+-->
+# AI/Spec-Driven Book Creation with Spec-Kit Plus and Claude Code Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-first documentation workflow
+All documentation and content creation must follow a spec-first approach, ensuring clear requirements and structured development.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### High technical accuracy and clarity
+Content must be technically accurate, easy to understand, and free of ambiguity.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Practical and developer-focused explanations
+Explanations should be practical, providing developers with actionable insights and real-world relevance.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### AI-assisted but human-verified content
+AI tools can assist in content generation, but all output must be human-reviewed and verified for accuracy and quality.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Purpose, Environment & Audience
 
-### [PRINCIPLE_6_NAME]
+Purpose & Environment:
+- Use Spec-Kit Plus and Claude Code for all book writing.
+- All work must occur inside a frontend folder which are on root of the directory.
+- Inside frontend, the Docusaurus project must be created using the Context7 MCP server.
+- Deploy the generated site to GitHub Pages.
+- Include a bottom-right chatbot UI visible on every page.
+  - Chatbot uses /query API endpoint.
+  - Must support streaming, abort behavior, and robust error handling.
 
+Audience:
+- Software developers
+- AI learners
+- Technical students
 
-[PRINCIPLE__DESCRIPTION]
+## Standards & Requirements
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Standards:
+- Each chapter must follow the defined spec structure.
+- Markdown format only.
+- Clear English with simple, understandable explanations.
+- No fabricated APIs, tools, technologies, or concepts.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Tooling Requirements:
+- Writing: Spec-Kit Plus + Claude Code
+- Static site: Docusaurus created using Context7 MCP (inside frontend folder on root directory)
+- Deployment: GitHub Pages
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+Content Requirements:
+- Course covers 13 weeks, organized as:
+  - 5 chapters
+  - 1 hardware requirements section
+  - 1 final assessment section
+- Each chapter must contain 4 topics.
+- Each topic must include:
+  - Headings
+  - Explanations
+  - Bullet points
+  - Tables or examples where appropriate
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Constraints:
+- Language: English
+- No placeholder or plagiarized content
+- Beginner-friendly, professional tone
+
+Success Criteria:
+- Docusaurus project builds successfully using Context7 MCP inside frontend folder on root directory.
+- Fully deployed and functional on GitHub Pages.
+- Chatbot UI works on all pages using /query with error handling and abort support.
+- All content matches specifications exactly.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other project practices.
+Amendments require documentation, approval, and a migration plan.
+All pull requests and reviews must verify compliance with these principles.
+Complexity must always be justified.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2025-12-05 | **Last Amended**: 2025-12-05
